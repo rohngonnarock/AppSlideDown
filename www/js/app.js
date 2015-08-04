@@ -33,6 +33,12 @@ App.controller('CardsCtrl', function ($scope, $ionicSwipeCardDelegate, photosFac
         $scope.id = data.QuoteId;
         //console.log(data);
     });
+   
+
+    $scope.ShareQuote = function () {
+        window.plugins.socialsharing.share($scope.quote);
+    };
+
 
     $scope.next = function () {
         counter = 1;
@@ -54,7 +60,7 @@ App.controller('CardsCtrl', function ($scope, $ionicSwipeCardDelegate, photosFac
         });
     };
 
-    var cardTypes = [{ title: 'Swipe down to clear the card', image: 'http://ionicframework.com.s3.amazonaws.com/demos/ionic-contrib-swipecards/pic.png' },
+    var cardTypes = [{ title: 'Swipe down to get started', image: 'http://ionicframework.com.s3.amazonaws.com/demos/ionic-contrib-swipecards/pic.png' },
       { title: 'Where is this?', image: 'http://ionicframework.com.s3.amazonaws.com/demos/ionic-contrib-swipecards/pic.png' },
       { title: 'What kind of grass is this?', image: 'http://ionicframework.com.s3.amazonaws.com/demos/ionic-contrib-swipecards/pic2.png' },
       { title: 'What beach is this?', image: 'http://ionicframework.com.s3.amazonaws.com/demos/ionic-contrib-swipecards/pic3.png' },
